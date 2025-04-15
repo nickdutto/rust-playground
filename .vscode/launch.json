@@ -7,39 +7,41 @@
     {
       "type": "lldb",
       "request": "launch",
-      "name": "Debug executable 'rust-learn-grep'",
+      "name": "Debug executable 'minigrep'",
       "cargo": {
         "args": [
           "build",
-          "--bin=rust-learn-grep",
-          "--package=rust-learn-grep"
+          "--manifest-path=./minigrep/Cargo.toml",
+          "--bin=minigrep",
+          "--package=minigrep"
         ],
         "filter": {
-          "name": "rust-learn-grep",
+          "name": "minigrep",
           "kind": "bin"
         }
       },
       "args": [],
-      "cwd": "${workspaceFolder}"
+      "cwd": "${workspaceFolder}/minigrep"
     },
     {
       "type": "lldb",
       "request": "launch",
-      "name": "Debug unit tests in executable 'rust-learn-grep'",
+      "name": "Debug unit tests in executable 'minigrep'",
       "cargo": {
         "args": [
           "test",
           "--no-run",
-          "--bin=rust-learn-grep",
-          "--package=rust-learn-grep"
+          "--manifest-path=./minigrep/Cargo.toml",
+          "--bin=minigrep",
+          "--package=minigrep"
         ],
         "filter": {
-          "name": "rust-learn-grep",
+          "name": "minigrep",
           "kind": "bin"
         }
       },
       "args": [],
-      "cwd": "${workspaceFolder}"
+      "cwd": "${workspaceFolder}/minigrep"
     }
   ]
 }
